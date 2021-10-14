@@ -3,6 +3,9 @@
 /public/storage
 /storage/*.key
 vendor/*
+!vendor/bin
+vendor/bin/*
+!vendor/bin/sail
 !vendor/laravel
 .phpunit.result.cache
 docker-compose.override.yml
