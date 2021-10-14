@@ -5,6 +5,7 @@
 vendor/*
 !vendor/bin
 vendor/bin/*
+!vendor/autoload.php
 !vendor/bin/sail
 !vendor/laravel
 .phpunit.result.cache
