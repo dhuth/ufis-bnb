@@ -1,7 +1,11 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
+
 
 class PropertySeeder extends Seeder
 {
@@ -12,7 +16,7 @@ class PropertySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('property')->insert([
+                DB::table('property')->insert([
                 ['title' => 'Heart of Salt Lake City', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
                 ['title' => 'Glamorous Draper Mansion w/ Pool', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
                 ['title' => 'Historic Downtown Apartment', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
@@ -20,5 +24,6 @@ class PropertySeeder extends Seeder
                 ['title' => 'Secluded Cabin in Midway, UT', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')]
             ]
         );
+
     }
 }

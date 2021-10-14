@@ -22,17 +22,12 @@ We will use this project as a way to analyze your frontend, backend, and databas
 
 ## Setup ##
 
-#### Homestead Setup ####
-* It is highly recommended that you use [Homestead](https://laravel.com/docs/7.x/homestead) as your local Laravel development environment (follow this [step-by-step installation tutorial](https://nguyenmichelle.github.io/) for MacOS and Windows). This will ensure that your local environment has the required packages and dependencies.
-* In your `Homestead.yaml` file, be sure to map a folder to the parent folder that contains the ufis-bnb folder, and map your site to the public folder of ufis-bnb. For example, if you cloned the ufis-bnb repo into a folder named `code` located at `~/code` path, your Homestead.yaml would want to include this:
-    * ![Example](/homestead_yaml.png) 
-         * Make sure that the string you map your site to (`homestead.test`, in this example) has been added to your hosts file.
-* After you are set-up, run `vagrant up` and `vagrant ssh` from your Homestead folder. Then, navigate to the `~/code/ufis-bnb` folder and run `composer install` and `php artisan migrate:fresh --seed` from inside the Vagrant VM command line. 
-* You should then be able to navigate to your site (`homestead.test` in our example) in your browser to see the homepage of the skeleton app we have provided.
+#### Docker Setup ####
+* It is highly recommended that you use [Docker/Laravel Sail](https://laravel.com/docs/8.x/sail) as your local Laravel development environment (follow this [step-by-step installation tutorial](https://nguyenmichelle.github.io/docker/)). This will ensure that your local environment has the required packages and dependencies.
                                                                                                
    
 #### Other Setup ####
-* Homestead is not necessary to run a local Laravel app, however, if you decide not to use Homestead for your development, be sure to update your DB configurations in the `.env` file.
+* Docker is not necessary to run a local Laravel app, however, if you decide not to use Docker/Sail for your development, be sure to update your DB configurations in the `.env` file.
 * After cloning/forking the repo, run `composer install` from the `ufis-bnb` directory as well as `php artisan migrate:fresh --seed`.
 * You should now be able to navigate to the homepage of your local site from your browser to see the homepage of the skeleton app we have provided. 
 
