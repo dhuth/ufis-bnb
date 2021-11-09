@@ -19,6 +19,15 @@ class CreatePropertyTable extends Migration
             $table->string('property_type');
             $table->timestamps();
         });
+        
+        Schema::create('review', function(Blueprint $table) {
+            $table->increments('review_id');
+            $table->integer('property_id');
+            $table->integer('rating');
+            $table->string('comment')->default("");
+            
+            //$table->foreign('property_id')->references('property_id')->on('property');
+        });
     }
 
     /**
@@ -29,5 +38,6 @@ class CreatePropertyTable extends Migration
     public function down()
     {
         Schema::dropIfExists('property');
+        Schema::dropIfExists('review');
     }
 }
