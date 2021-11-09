@@ -17,11 +17,11 @@ class PropertySeeder extends Seeder
     public function run()
     {
                 DB::table('property')->insert([
-                ['title' => 'Heart of Salt Lake City', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
-                ['title' => 'Glamorous Draper Mansion w/ Pool', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
-                ['title' => 'Historic Downtown Apartment', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
-                ['title' => 'Charming Salt Lake Valley Bed & Breakfast', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
-                ['title' => 'Secluded Cabin in Midway, UT', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')]
+                ['title' => 'Heart of Salt Lake City', 'property_type' => 'House', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
+                ['title' => 'Glamorous Draper Mansion w/ Pool', 'property_type' => 'House', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
+                ['title' => 'Historic Downtown Apartment', 'property_type' => 'Apartment',  'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
+                ['title' => 'Charming Salt Lake Valley Bed & Breakfast', 'property_type' => 'Apartment', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')],
+                ['title' => 'Secluded Cabin in Midway, UT', 'property_type' => 'Cabin', 'created_at' => Carbon::now()->format('Y-m-d H:i:s'), 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')]
             ]
         );
 
