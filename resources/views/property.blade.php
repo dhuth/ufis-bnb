@@ -32,6 +32,10 @@
                 font-size: 84px;
                 padding-top: 5rem;
             }
+            
+            .sub-title {
+                font-size: 42px;
+            }
 
             .links > a {
                 color: #636b6f;
@@ -49,11 +53,16 @@
         <div class="full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    {{ $property->title }}
+                    {{ $property->title }} <br/>
                 </div>
+                <div class="sub-title">
+                    {{ $property->property_type }}
+                </div>
+                <div>
                     @foreach($reviews as $review)
                     <p>{{ $review->rating }}/5 "{{ $review->comment }}"</p>
                     @endforeach
+                </div>
             </div>
         </div>
     </body>
