@@ -8,4 +8,9 @@ class Property extends Model
 {
     protected $table = 'property';
     protected $primaryKey = 'id';
+    
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

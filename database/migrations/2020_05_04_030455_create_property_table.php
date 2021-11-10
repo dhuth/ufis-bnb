@@ -14,14 +14,14 @@ class CreatePropertyTable extends Migration
     public function up()
     {
         Schema::create('property', function (Blueprint $table) {
-            $table->increments('property_id');
+            $table->increments('id');
             $table->string('title');
             $table->string('property_type');
             $table->timestamps();
         });
         
         Schema::create('review', function(Blueprint $table) {
-            $table->increments('review_id');
+            $table->increments('id');
             $table->integer('property_id');
             $table->integer('rating');
             $table->string('comment')->default("");

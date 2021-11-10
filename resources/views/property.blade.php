@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>UFIS-BNB</title>
+        <title>{{ $property->title }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -49,13 +49,11 @@
         <div class="full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome to UFIS-BNB!
+                    {{ $property->title }}
                 </div>
-                <div class="links">
-                    @foreach($properties as $property)
-                    <a href="/property/{{ $property->id }}">{{ $property->title }}</a>
+                    @foreach($reviews as $review)
+                    <p>{{ $review->rating }}/5 "{{ $review->comment }}"</p>
                     @endforeach
-                </div>
             </div>
         </div>
     </body>

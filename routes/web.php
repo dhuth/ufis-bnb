@@ -1,6 +1,7 @@
 <?php
 
 use App\Property;
+use App\Review;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,16 @@ use App\Property;
 |
 */
 
+
+Route::get('/property/{id}', function($id) {
+    $property = Property::find($id);
+    $reviews = $property->reviews()->get();
+    return view('property')
+            ->with('property', $property)
+            ->with('reviews', $reviews);
+});
+
+// landing page
 Route::get('/', function () {
     $properties = Property::all();
     return view('welcome')->with('properties', $properties);
