@@ -51,6 +51,16 @@
                 <div class="title m-b-md">
                     Welcome to UFIS-BNB!
                 </div>
+                <form action="/">
+                    <label for="filter-by-type">Filter by type<label/>
+                    <select id="filter-by-type" name="filter-by-type">
+                        <option value="None">All</option>
+                        @foreach($property_types as $ptype)
+                        <option value="{{ $ptype->property_type }}">{{$ptype->property_type}}</option>
+                        @endforeach
+                    </select>
+                    <input type="submit" value="Filter"/><br/>
+                </form>
                 <div class="links">
                     @foreach($properties as $property)
                     <a href="/property/{{ $property->id }}">{{ $property->title }}</a>
